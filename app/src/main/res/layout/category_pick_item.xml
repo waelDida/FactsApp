@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="category"
+            type="com.wapp.factsapp.models.Category" />
+    </data>
+    <androidx.cardview.widget.CardView
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_margin="4dp"
+        app:cardElevation="3dp"
+        app:cardCornerRadius="10dp">
+        <RelativeLayout
+            android:layout_width="110dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/category_picked_image"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:scaleType="fitXY"
+                app:setCategoryImage="@{category}"
+                tools:ignore="ContentDescription"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+            <View
+                android:id="@+id/view4"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:background="#40000000" />
+
+            <TextView
+                android:id="@+id/category_picked_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:fontFamily="@font/baloo"
+                android:gravity="center"
+                android:layout_alignParentBottom="true"
+                android:text="@{category.name}"
+                android:textColor="@color/white"
+                tools:text="Celebrities" />
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="5dp"
+                app:setVisibility="@{category}"
+                app:srcCompat="@drawable/ic_check"
+                tools:ignore="ContentDescription" />
+
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+ <!-- <androidx.cardview.widget.CardView
+      android:layout_width="120dp"
+      android:layout_height="120dp"
+      android:layout_margin="4dp"
+      app:cardElevation="3dp"
+      app:cardCornerRadius="10dp">
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+          <ImageView
+              android:id="@+id/category_picked_image"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:scaleType="fitXY"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent"
+              app:setCategoryImage="@{category}"
+              tools:ignore="ContentDescription"
+              tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+          <ImageView
+              android:id="@+id/imageView"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="8dp"
+              android:layout_marginTop="8dp"
+              android:layout_marginEnd="8dp"
+              android:layout_marginBottom="8dp"
+              app:setVisibility="@{category}"
+              app:layout_constraintBottom_toBottomOf="@+id/category_picked_image"
+              app:layout_constraintEnd_toEndOf="@+id/category_picked_image"
+              app:layout_constraintHorizontal_bias="1.0"
+              app:layout_constraintStart_toStartOf="@+id/category_picked_image"
+              app:layout_constraintTop_toTopOf="@+id/category_picked_image"
+              app:layout_constraintVertical_bias="0.0"
+              app:srcCompat="@drawable/ic_check"
+              tools:ignore="ContentDescription" />
+
+          <TextView
+              android:id="@+id/category_picked_name"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="8dp"
+              android:layout_marginTop="8dp"
+              android:layout_marginEnd="8dp"
+              android:layout_marginBottom="8dp"
+              android:fontFamily="@font/roboto_bold"
+              android:gravity="center"
+              android:text="@{category.name}"
+              android:textColor="@color/white"
+              android:textSize="15sp"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent"
+              tools:text="Sport  and entertainment " />
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>-->
+</layout>

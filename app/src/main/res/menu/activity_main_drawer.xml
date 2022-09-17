@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group
+        android:id="@+id/section1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_home"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/categoriesFragment"
+            android:icon="@drawable/ic_menu_topics"
+            android:title="@string/topics" />
+        <item
+            android:id="@+id/bookmarksFragment"
+            android:icon="@drawable/ic_menu_bookmark"
+            android:title="@string/bookmarks" />
+        <item
+            android:id="@+id/favoriteFragment"
+            android:icon="@drawable/ic_menu_liked"
+            android:title="@string/favorite" />
+        <item
+            android:id="@+id/profileFragment"
+            android:icon="@drawable/ic_menu_user"
+            android:title="@string/profile" />
+        <item
+            android:id="@+id/startFragment"
+            android:icon="@drawable/ic_menu_quiz"
+            android:title="@string/quiz" />
+    </group>
+
+    <group
+        android:id="@+id/section2"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/share"
+            android:icon="@drawable/ic_menu_share"
+            android:title="@string/share" />
+        <item
+            android:id="@+id/rate"
+            android:icon="@drawable/ic_menu_rate"
+            android:title="@string/rate" />
+        <item
+            android:id="@+id/privacy"
+            android:icon="@drawable/ic_menu_privacy"
+            android:title="@string/privacy_policy" />
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/ic_menu_logout"
+            android:title="@string/logout" />
+
+    </group>
+</menu>

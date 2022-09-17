@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".flow.ui.quiz.gameOver.GameOver">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.wapp.factsapp.flow.ui.quiz.gameOver.GameOverViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/game_over_color">
+
+        <Button
+            android:id="@+id/retry"
+            style="@style/retry_button_style"
+            android:text="@string/try_again"
+            android:onClick="@{() -> viewModel.onPlayAgain()}"
+            android:textColor="@color/game_over_color"
+            app:layout_constraintBottom_toTopOf="@+id/quit_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/game_over_second_text"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/quit_button"
+            style="@style/retry_button_style"
+            android:text="@string/quit"
+            android:onClick="@{() -> viewModel.onQuitQuiz()}"
+            android:textColor="@color/game_over_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ProgressBar
+            android:id="@+id/result_progress"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:indeterminateOnly="false"
+            android:progressDrawable="@drawable/quiz_over_circle"
+            app:layout_constraintBottom_toTopOf="@+id/gained_coins"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/game_over_second_text"
+            tools:progress="80" />
+
+        <TextView
+            android:id="@+id/gained_coins"
+            style="@style/gained_coins_style"
+            android:text="@string/_0"
+            app:drawableStartCompat="@drawable/ic_coin"
+            app:layout_constraintBottom_toTopOf="@+id/view5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/game_over_second_text"
+            app:layout_constraintVertical_bias="1.0"
+            tools:text="+0" />
+
+        <TextView
+            android:id="@+id/game_over_second_text"
+            style="@style/quiz_second_text_style"
+            app:timeIsUp="@{viewModel.timeIsUp}"
+            app:correctAnswersSecondText="@{viewModel.correctAnswers}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/game_over_first_text"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="Answer faster next time !" />
+
+        <TextView
+            android:id="@+id/game_over_first_text"
+            style="@style/quiz_first_text_style"
+            app:gameOverFirstText="@{viewModel.timeIsUp}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout3"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="TIME'S UP" />
+
+        <TextView
+            android:id="@+id/result_percentage"
+            style="@style/result_percentage_style"
+            app:correctAnswers="@{viewModel.correctAnswers}"
+            app:questionNumbers="@{viewModel.questionsNumber}"
+            app:layout_constraintBottom_toBottomOf="@+id/result_progress"
+            app:layout_constraintEnd_toEndOf="@+id/result_progress"
+            app:layout_constraintStart_toStartOf="@+id/result_progress"
+            app:layout_constraintTop_toTopOf="@+id/result_progress"
+            tools:text="80%"/>
+
+        <TextView
+            android:id="@+id/completed_questions"
+            style="@style/completed_question_style"
+            android:text="@{@string/formatted_quiz_questions(viewModel.correctAnswers,viewModel.questionsNumber)}"
+            app:layout_constraintBottom_toBottomOf="@+id/result_progress"
+            app:layout_constraintEnd_toEndOf="@+id/result_progress"
+            app:layout_constraintStart_toStartOf="@+id/result_progress"
+            app:layout_constraintTop_toTopOf="@+id/result_progress"
+            app:layout_constraintVertical_bias="0.68"
+            tools:text="8/10" />
+
+        <View
+            android:id="@+id/view5"
+            style="@style/separator_style"
+            app:layout_constraintBottom_toTopOf="@+id/retry"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/game_over_second_text"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <FrameLayout
+            android:id="@+id/frameLayout3"
+            style="@style/total_coins_layout_style"
+            android:background="@drawable/quiz_over_coins"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"/>
+
+        <TextView
+            android:id="@+id/total_coins"
+            style="@style/total_coins_text_style"
+            android:text="@{String.valueOf(viewModel.currentUser.coins)}"
+            app:layout_constraintBottom_toBottomOf="@+id/frameLayout3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/frameLayout3"
+            app:layout_constraintTop_toTopOf="@+id/frameLayout3"
+            app:drawableStartCompat="@drawable/ic_coin"
+            tools:text="150"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

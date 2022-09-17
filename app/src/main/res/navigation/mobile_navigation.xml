@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.wapp.factsapp.flow.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_factDetail"
+            app:destination="@id/factDetail"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoriesFragment"
+        android:name="com.wapp.factsapp.flow.ui.categories.category.CategoriesFragment"
+        android:label="Topics"
+        tools:layout="@layout/fragment_categories">
+        <action
+            android:id="@+id/action_categoriesFragment_to_categoryDetail"
+            app:destination="@id/categoryDetail"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/categoriesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.wapp.factsapp.flow.ui.favorite.Favorite"
+        android:label="Favorite"
+        tools:layout="@layout/fragment_favorite">
+        <action
+            android:id="@+id/action_favoriteFragment_to_factDetail"
+            app:destination="@id/factDetail"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/favoriteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookmarksFragment"
+        android:name="com.wapp.factsapp.flow.ui.bookmarks.BookmarksFragment"
+        android:label="Bookmarks"
+        tools:layout="@layout/fragment_bookmarks">
+        <action
+            android:id="@+id/action_bookmarksFragment_to_factDetail"
+            app:destination="@id/factDetail"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/bookmarksFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/factDetail"
+        android:name="com.wapp.factsapp.flow.ui.factsdetails.FactDetail"
+        android:label="fragment_fact_detail"
+        tools:layout="@layout/fragment_fact_detail" >
+        <argument
+            android:name="fact_id"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryDetail"
+        android:name="com.wapp.factsapp.flow.ui.categories.detail.CategoryDetail"
+        android:label="Infact"
+        tools:layout="@layout/fragment_category_detail">
+        <action
+            android:id="@+id/action_categoryDetail_to_factDetail"
+            app:destination="@id/factDetail"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/categoryDetail" />
+        <argument
+            android:name="category"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.wapp.factsapp.flow.ui.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_pickUpCategories"
+            app:destination="@id/pickUpCategories"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/pickUpCategories"
+        android:name="com.wapp.factsapp.flow.ui.pickcategories.PickUpCategories"
+        android:label="Topics" />
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.wapp.factsapp.flow.ui.quiz.StartFragment"
+        android:label="Quiz"
+        tools:layout="@layout/fragment_start" >
+        <action
+            android:id="@+id/action_startFragment_to_quizFragment"
+            app:destination="@id/quizFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:popUpTo="@id/startFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="com.wapp.factsapp.flow.ui.quiz.questions.QuizFragment"
+        android:label="fragment_quiz"
+        tools:layout="@layout/fragment_quiz" >
+        <action
+            android:id="@+id/action_quizFragment_to_gameOver"
+            app:destination="@id/gameOver"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/startFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_quizFragment_to_quizCompleted"
+            app:destination="@id/quizCompleted"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/startFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameOver"
+        android:name="com.wapp.factsapp.flow.ui.quiz.gameOver.GameOver"
+        android:label="fragment_game_over"
+        tools:layout="@layout/fragment_game_over" >
+        <action
+            android:id="@+id/action_gameOver_to_quizFragment"
+            app:destination="@id/quizFragment" />
+        <action
+            android:id="@+id/action_gameOver_to_nav_home"
+            app:destination="@id/nav_home" />
+        <argument
+            android:name="correct_answers"
+            app:argType="integer" />
+        <argument
+            android:name="questions_number"
+            app:argType="integer" />
+        <argument
+            android:name="time_is_up"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizCompleted"
+        android:name="com.wapp.factsapp.flow.ui.quiz.quizCompleted.QuizCompleted"
+        android:label="fragment_quiz_completed"
+        tools:layout="@layout/fragment_quiz_completed" >
+        <action
+            android:id="@+id/action_quizCompleted_to_nav_home"
+            app:destination="@id/nav_home" />
+        <argument
+            android:name="correct_answers"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_quizCompleted_to_quizFragment"
+            app:destination="@id/quizFragment" />
+    </fragment>
+
+</navigation>

@@ -1,0 +1,140 @@
+<resources>
+    <string name="app_name">Daily Facts</string>
+
+    <string name="facebook_app_id">2724412637803473</string>
+    <string name="fb_login_protocol_scheme">fb2724412637803473</string>
+
+    <string name="interstitial_ads_test">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="interstitial_ads">ca-app-pub-9789704780798889/4950689526</string>
+    <string name="rewarded_ads">ca-app-pub-9789704780798889/4078437464</string>
+
+
+    <string name="no_internet">No internet connection</string>
+    <string name="cant_connect">Can\'t connect right now</string>
+    <string name="no_enough_coins">You don\'t have enough coins</string>
+    <string name="ads_not_ready">Reward ads not ready yet !</string>
+
+    <string name="login_text">login</string>
+    <string name="sign_up_text">Sign Up</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="email_text">Email</string>
+    <string name="password_text">Password</string>
+
+    <string name="enter_email_pass">Enter your email and password</string>
+    <string name="invalid_email">Invalid Email</string>
+    <string name="authentication_failed">Authentication failed.</string>
+    <string name="fill_all_fields">Please fill in all fields</string>
+    <string name="check_password">Please check your password</string>
+    <string name="verify_email">Please verify your email</string>
+    <string name="registration_message">Registered successfully, please check your email for verification</string>
+    <string name="something_wrong_message">Something wrong happened</string>
+    <string name="already_signed_up">You have already signed up</string>
+
+    <string name="send">Send</string>
+    <string name="back">Back</string>
+    <string name="check_reset">Check your email and reset the password</string>
+    <string name="fail_reset_link">Fail to send the reset link</string>
+    <string name="forgot_your_password">Forgot your password ?</string>
+    <string name="reset_text">Enter your email address and we\'ll send you a link to reset your password</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="register">Register</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="invalid_password">Password must contain a minimum of eight without empty space</string>
+    <string name="login">Login</string>
+    <string name="facebook">Facebook</string>
+    <string name="or_sign_in_with">or Sign in with</string>
+    <string name="google">Google</string>
+    <string name="don_t_have_an_account">Don\'t have an account ?</string>
+    <string name="failed_to_send_email">"Failed to send verification email"</string>
+    <string name="failed_to_sign_in">Failed to sign in</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="instant_message">Instant Message</string>
+    <string name="favorites">Favorites</string>
+    <string name="title_activity_drawer">DrawerActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+
+    <string name="title_activity_main">MainActivity</string>
+    <string name="categories">Categories</string>
+    <string name="favorite">Favorite</string>
+    <string name="share">Share</string>
+    <string name="rate">Rate</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="logout">Logout</string>
+    <string name="bookmarks">Bookmarks</string>
+    <string name="profile">Profile</string>
+
+    <string name="formatted_welcome_text">Welcome %1$s!</string>
+    <string name="formatted_unlock_detail">You have %1$d coins !</string>
+    <string name="formatted_unlock_button">Unlock for %1$d coins</string>
+    <string name="formatted_question_number">%1$d/10</string>
+    <string name="formatted_count_down">0%1$d:%2$d</string>
+    <string name="formatted_quiz_percentage">%1$d%</string>
+    <string name="formatted_quiz_questions">%1$d/%2$d</string>
+    <string name="formatted_gained_coins">+%1$d</string>
+
+    <string name="select_category">Select at least one category</string>
+
+    <string name="gallery_permission_text">The app needs your permission to access photos</string>
+
+    <string name="fact_notification_channel_id" translatable="false">101</string>
+    <string name="fact_notification_title">Your Daily Fact</string>
+    <string name="fact_notification_channel_name" translatable="true">Facts Notification</string>
+    <string name="notification_message">You got a new Fact!</string>
+
+    <string name="fcm_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <string name="fcm_notification_channel_name" translatable="true">App Notification</string>
+    <string name="topics">Topics</string>
+    <string name="no_facts_found">No Facts Found</string>
+    <string name="notifications">Notifications</string>
+    <string name="my_topics">My Topics</string>
+    <string name="got_it">Got it</string>
+    <string name="gdpr_text">GDPR</string>
+    <string name="unlock_topic">Unlock Topic</string>
+    <string name="get_free_coins">Get free coins</string>
+    <string name="more_facts">More Facts</string>
+    <string name="relevant_ads">Yes, continue to see relevant ads</string>
+    <string name="no_relevant_ads">No, see ads that are less relevant</string>
+    <string name="ads_request_text">Can we continue to use your data to tailor ads for you ?</string>
+    <string name="quiz">Quiz</string>
+    <string name="try_again">Try Again</string>
+    <string name="return_back">Return</string>
+    <string name="continue_text">CONTINUE</string>
+    <string name="quit">Quit</string>
+    <string name="play_again">Play Again</string>
+
+    <string name="game_over">GAME OVER</string>
+    <string name="very_close">You where very close, though!</string>
+    <string name="better_luck">Better luck next time!</string>
+    <string name="time_is_up">TIME\'S UP</string>
+    <string name="answer_faster_next_time">Answer faster next time!</string>
+    <string name="completed">COMPLETED</string>
+    <string name="well_done">WELL DONE!</string>
+    <string name="perfect">PERFECT!</string>
+    <string name="_0">+0</string>
+    <string name="earned_coins_text">You have earned 100 coins! Earn more and unlock new topics by playing the quiz game</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete_message">Account deleted with success</string>
+    <string name="play">Play</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="are_you_sure_you_want_to_delete_your_account">Are you sure you want to delete your account ?</string>
+    <string name="make_learning_your_habit">Make Learning Your Habit</string>
+    <string name="free_coins">Free coins</string>
+    <string name="anonymously">Anonymously</string>
+
+</resources>
